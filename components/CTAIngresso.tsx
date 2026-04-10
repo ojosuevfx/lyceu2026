@@ -132,10 +132,14 @@ export default function CTAIngresso() {
               <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "13px", lineHeight: "170%", color: "#8A9AA4", margin: 0 }}>
                 O Lyceum é o ambiente que você procurava: uma escola real, com método, currículo e comunidade, para quem quer pensar de verdade. Não um curso gravado. Uma escola.
               </p>
-              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "13px", lineHeight: "160%", color: "rgba(138,154,164,0.5)", margin: 0, fontStyle: "italic" }}>
-                "Não haverá renascimento cultural sem homens e mulheres capazes de pensar." —{" "}
-                <span style={{ fontStyle: "normal", color: "rgba(200,169,110,0.5)" }}>Lyceum</span>
-              </p>
+              <div style={{ borderLeft: "2px solid rgba(200,169,110,0.3)", paddingLeft: "16px" }}>
+                <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "13px", lineHeight: "165%", color: "rgba(244,245,246,0.45)", margin: "0 0 8px", fontStyle: "italic" }}>
+                  "Não haverá renascimento cultural sem homens e mulheres capazes de pensar."
+                </p>
+                <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "11px", letterSpacing: "0.08em", textTransform: "uppercase", color: "rgba(200,169,110,0.6)" }}>
+                  Lyceum, Escola de Filosofia Clássica
+                </span>
+              </div>
             </div>
           </div>
         </motion.div>
