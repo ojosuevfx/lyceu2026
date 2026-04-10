@@ -115,26 +115,23 @@ export default function CTAIngresso() {
         >
           <div style={{ display: "flex", flexDirection: "column", borderRadius: "24px", overflow: "hidden", background: "radial-gradient(100% 100% at 50% 0px, #1E2424 0%, #0D0F10 100%)", border: "1px solid rgba(244,245,246,0.07)" }}>
             {/* Card top */}
-            <div style={{ padding: "40px 40px 32px", borderBottom: "1px solid rgba(244,245,246,0.07)" }}>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "20px" }}>
-                <div>
-                  <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "22px", color: "#F4F5F6", display: "block", marginBottom: "6px" }}>
-                    Matrícula no Lyceum
-                  </span>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "14px", color: "#8A9AA4", margin: 0 }}>
-                    Turma com vagas limitadas. Processo seletivo obrigatório.
-                  </p>
-                </div>
-                <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8a96e", background: "rgba(200,169,110,0.08)", border: "1px solid rgba(200,169,110,0.15)", borderRadius: "200px", padding: "4px 12px", whiteSpace: "nowrap" }}>
-                  Vagas abertas
-                </span>
-              </div>
+            <div style={{ padding: "40px 40px 32px", borderBottom: "1px solid rgba(244,245,246,0.07)", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "12px" }}>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8a96e", background: "rgba(200,169,110,0.08)", border: "1px solid rgba(200,169,110,0.15)", borderRadius: "200px", padding: "4px 12px" }}>
+                Vagas abertas
+              </span>
+              <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "22px", color: "#F4F5F6" }}>
+                Matrícula no Lyceum
+              </span>
+              <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "14px", color: "#8A9AA4", margin: 0 }}>
+                Turma com vagas limitadas. Processo seletivo obrigatório.
+              </p>
 
               <Link
                 href="https://form.respondi.app/ujRzWMSF?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta"
+                className="btn-cta-apply"
                 style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", width: "100%", padding: "14px 28px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "pointer" }}
               >
                 <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#0D0F10" }}>
@@ -174,6 +171,7 @@ export default function CTAIngresso() {
       <style>{`
         @media (max-width: 1199px) { .cta-inner { width: 100% !important; padding: 0 32px !important; gap: 48px !important; } .cta-h2 { font-size: 34px !important; } }
         @media (max-width: 809px) { .cta-inner { grid-template-columns: 1fr !important; padding: 0 24px !important; } .cta-h2 { font-size: 30px !important; } }
+        @media (max-width: 600px) { .btn-cta-apply { border-radius: 16px !important; } }
       `}</style>
     </section>
   );
