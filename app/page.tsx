@@ -13,10 +13,12 @@ import Cases from "@/components/Cases";
 import CTAIngresso from "@/components/CTAIngresso";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
     <main style={{ backgroundColor: "#0C0A06", minHeight: "100vh", overflowX: "hidden" }}>
+      <SmoothScroll />
       <Cursor />
       <Navbar />
       <Hero />
