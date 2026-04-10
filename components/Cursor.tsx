@@ -8,6 +8,9 @@ export default function Cursor() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // Não ativa em dispositivos touch
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+
     let mouseX = 0, mouseY = 0;
     let ringX = 0, ringY = 0;
     let hovering = false;
