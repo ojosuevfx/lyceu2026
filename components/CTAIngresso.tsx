@@ -131,7 +131,7 @@ export default function CTAIngresso() {
               </div>
 
               <Link
-                href="https://wa.me/5511999999999"
+                href="https://form.respondi.app/ujRzWMSF?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-cta"
