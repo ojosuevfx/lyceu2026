@@ -100,7 +100,7 @@ export default function FAQ() {
           letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e",
           display: "block", marginBottom: "16px",
         }}>
-          Perguntas Frequentes
+          Admissões
         </span>
         <h2 style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800,
@@ -114,7 +114,7 @@ export default function FAQ() {
           fontFamily: "'Inter', sans-serif", fontWeight: 400,
           fontSize: "15px", lineHeight: "165%", color: "#8A9AA4", margin: 0,
         }}>
-          Se sua pergunta não estiver aqui, entre em contato antes de se matricular.
+          Se sua dúvida não estiver respondida aqui, entre em contato antes de submeter sua candidatura.
         </p>
       </motion.div>
 

@@ -115,7 +115,7 @@ export default function Hero() {
             style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#c8a96e", flexShrink: 0, display: "block" }}
           />
           <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "12px", color: "#c8a96e", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            1º Escola de Filosofia Clássica
+            Escola de Filosofia Clássica — Brasil
           </span>
         </motion.div>
 
@@ -142,7 +142,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "18px", lineHeight: "170%", color: "#8A9AA4", maxWidth: "600px", margin: 0 }}
         >
-          O Lyceum é a primeira escola brasileira de filosofia pelo Método Socrático, uma formação intelectual sólida, fundamentada nos grandes clássicos, voltada àqueles que desejam pensar com clareza e profundidade.
+          Formação filosófica séria, fundamentada nos grandes textos da tradição ocidental, conduzida pelo método socrático de discussão. Uma escola para quem deseja pensar com clareza, rigor e profundidade.
         </motion.p>
 
         {/* CTAs */}
@@ -157,7 +157,7 @@ export default function Hero() {
               style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "14px 32px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "none" }}
             >
               <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#0D0F10" }}>
-                Quero ingressar no Lyceum
+                Candidatar-se ao Lyceum
               </span>
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

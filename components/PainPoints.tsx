@@ -62,14 +62,14 @@ export default function PainPoints() {
         <div className="pain-left" style={{ position: "sticky", top: "120px", display: "flex", flexDirection: "column", gap: "32px" }}>
           <div>
             <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e", display: "block", marginBottom: "20px" }}>
-              O Problema
+              O Contexto
             </span>
             <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "36px", lineHeight: "116%", letterSpacing: "-0.025em", color: "#F4F5F6", margin: "0 0 20px" }}>
-              Você consome conteúdo todo dia. Mas está{" "}
-              <span style={{ color: "#c8a96e" }}>aprendendo a pensar?</span>
+              A formação intelectual exige mais do que{" "}
+              <span style={{ color: "#c8a96e" }}>acesso a conteúdo.</span>
             </h2>
             <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "#8A9AA4", margin: 0 }}>
-              Podcasts, vídeos, artigos, threads. Nunca tivemos tanto acesso a ideias, e nunca fomos tão incapazes de organizá-las.
+              Vivemos numa era de abundância informacional e escassez de pensamento. O acesso a ideias não forma pensadores. O método, sim.
             </p>
           </div>
 
@@ -77,10 +77,10 @@ export default function PainPoints() {
           <div style={{ position: "relative", padding: "24px 28px", borderRadius: "16px", background: "rgba(200,169,110,0.03)", border: "1px solid rgba(200,169,110,0.08)" }}>
             <div style={{ position: "absolute", top: "24px", left: "-1px", width: "3px", height: "calc(100% - 48px)", background: "linear-gradient(to bottom, #c8a96e, rgba(200,169,110,0.2))", borderRadius: "0 2px 2px 0" }} />
             <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "#C4D0D6", margin: "0 0 12px", fontStyle: "italic" }}>
-              "O que você precisa não é de mais conteúdo. É de um método que te ensine a pensar."
+              "A educação não é o preenchimento de um balde, mas o acender de uma chama."
             </p>
             <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "12px", color: "#c8a96e", letterSpacing: "0.04em" }}>
-              A culpa não é sua. É do método.
+              William Butler Yeats
             </span>
           </div>
         </div>

@@ -37,11 +37,11 @@ export default function CTAIngresso() {
           style={{ textAlign: "center", marginBottom: "56px" }}
         >
           <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e", display: "block", marginBottom: "16px" }}>
-            Processo de Matrícula
+            Admissões
           </span>
           <h2 className="cta-h2" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "44px", lineHeight: "112%", letterSpacing: "-0.03em", color: "#F4F5F6", margin: "0 auto", maxWidth: "620px" }}>
-            Você chegou até aqui porque sabe que{" "}
-            <span style={{ color: "#c8a96e" }}>algo precisa mudar.</span>
+            Processo de candidatura ao{" "}
+            <span style={{ color: "#c8a96e" }}>Lyceum.</span>
           </h2>
         </motion.div>
 
@@ -63,17 +63,17 @@ export default function CTAIngresso() {
           <div style={{ padding: "48px 40px", borderRight: "1px solid rgba(244,245,246,0.07)", display: "flex", flexDirection: "column", gap: "28px" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "22px", color: "#F4F5F6", lineHeight: "130%" }}>
-                Matrícula no Lyceum
+                Admissão ao Lyceum
               </span>
               <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "14px", color: "#8A9AA4", margin: 0, lineHeight: "160%" }}>
-                Turma com vagas limitadas.<br />Processo seletivo obrigatório.
+                Turmas reduzidas.<br />Seleção por candidatura.
               </p>
             </div>
 
             {/* Vagas badge */}
             <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
               <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#c8a96e", display: "block", flexShrink: 0 }} />
-              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "13px", color: "#c8a96e" }}>Vagas abertas</span>
+              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "13px", color: "#c8a96e" }}>Admissão aberta</span>
             </div>
 
             <Link
@@ -84,7 +84,7 @@ export default function CTAIngresso() {
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", width: "100%", padding: "14px 20px", borderRadius: "12px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "pointer" }}
             >
               <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#0D0F10" }}>
-                Quero me matricular
+                Candidatar-se ao Lyceum
               </span>
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -130,7 +130,7 @@ export default function CTAIngresso() {
 
             <div style={{ borderTop: "1px solid rgba(244,245,246,0.06)", paddingTop: "24px", display: "flex", flexDirection: "column", gap: "12px" }}>
               <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "13px", lineHeight: "170%", color: "#8A9AA4", margin: 0 }}>
-                O Lyceum é o ambiente que você procurava: uma escola real, com método, currículo e comunidade, para quem quer pensar de verdade. Não um curso gravado. Uma escola.
+                O Lyceum admite alunos por processo seletivo. As turmas são pequenas e deliberadamente limitadas para preservar a qualidade da discussão socrática.
               </p>
               <div style={{ borderLeft: "2px solid rgba(200,169,110,0.3)", paddingLeft: "16px" }}>
                 <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "13px", lineHeight: "165%", color: "rgba(244,245,246,0.45)", margin: "0 0 8px", fontStyle: "italic" }}>

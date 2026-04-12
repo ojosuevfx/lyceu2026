@@ -49,11 +49,11 @@ export default function About() {
           viewport={{ once: true, margin: "-8%" }}
           style={{ display: "flex", flexDirection: "column", gap: "28px", width: "44%", zIndex: 1 }}
         >
-          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e" }}>A solução</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e" }}>O Lyceum</span>
 
           <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "32px", lineHeight: "118%", letterSpacing: "-0.025em", color: "#F4F5F6", margin: 0 }}>
-            O Lyceum, onde se aprende filosofia na sua forma mais elevada.{" "}
-            <span style={{ color: "#c8a96e" }}>ensinada.</span>
+            Uma escola de filosofia fundamentada na{" "}
+            <span style={{ color: "#c8a96e" }}>tradição perene do Ocidente.</span>
           </h3>
 
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "#8A9AA4", margin: 0 }}>
@@ -72,7 +72,7 @@ export default function About() {
           <Link href="#ingresso" className="btn-cta"
             style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "13px 28px", borderRadius: "200px", textDecoration: "none", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", cursor: "pointer", width: "fit-content" }}
           >
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Quero ingressar</span>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Candidatar-se</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Cursor from "@/components/Cursor";
 import Hero from "@/components/Hero";
 import LogosMarquee from "@/components/LogosMarquee";
 import PainPoints from "@/components/PainPoints";
@@ -19,8 +18,7 @@ export default function Home() {
   return (
     <main style={{ backgroundColor: "#0C0A06", minHeight: "100vh", overflowX: "hidden" }}>
       <SmoothScroll />
-      <Cursor />
-      <Navbar />
+<Navbar />
       <Hero />
       <LogosMarquee />
       <PainPoints />

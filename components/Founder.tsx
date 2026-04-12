@@ -61,7 +61,7 @@ export default function Founder() {
         >
           <div>
             <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e", display: "block", marginBottom: "16px" }}>
-              O Fundador
+              Corpo Docente
             </span>
             <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "34px", lineHeight: "116%", letterSpacing: "-0.025em", color: "#F4F5F6", margin: 0 }}>
               Você não vai estudar sozinho, mas com alguém que já{" "}
@@ -100,7 +100,7 @@ export default function Founder() {
             className="btn-cta"
             style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "14px 30px", borderRadius: "200px", textDecoration: "none", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", cursor: "pointer", width: "fit-content", boxShadow: "0 4px 20px rgba(200,169,110,0.3)" }}
           >
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Conhecer o processo de matrícula</span>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Processo de candidatura</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>

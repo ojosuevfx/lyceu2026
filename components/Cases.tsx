@@ -124,17 +124,13 @@ export default function Cases() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true }}
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "16px", maxWidth: "540px", textAlign: "center", marginBottom: "64px", padding: "0 24px" }}
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px", maxWidth: "540px", textAlign: "center", marginBottom: "64px", padding: "0 24px" }}
       >
         <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "4px 14px", borderRadius: "200px", border: "1px solid rgba(200,169,110,0.2)", background: "rgba(200,169,110,0.05)" }}>
-          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8a96e" }}>Depoimentos</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#c8a96e" }}>Alumni</span>
         </div>
-        <h2 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "36px", lineHeight: "114%", letterSpacing: "-0.025em", color: "#F4F5F6", margin: 0 }}>
-          O que dizem quem já está{" "}
-          <span style={{ color: "#c8a96e" }}>dentro do Lyceum.</span>
-        </h2>
         <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "165%", color: "#8A9AA4", margin: 0 }}>
-          Depoimentos reais de alunos que mudaram sua forma de pensar.
+          Relatos de alunos sobre sua experiência na formação filosófica do Lyceum.
         </p>
       </motion.div>
 
