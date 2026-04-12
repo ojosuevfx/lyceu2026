@@ -9,8 +9,7 @@ const navLinks = [
   { label: "Sobre", href: "#lyceum" },
   { label: "Currículo", href: "#curriculo" },
   { label: "Corpo Docente", href: "#fundador" },
-  { label: "Alumni", href: "#depoimentos" },
-  { label: "Admissões", href: "#faq" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -34,10 +33,10 @@ export default function Navbar() {
       style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         transition: "background 300ms ease, box-shadow 300ms ease, border-color 300ms ease",
-        backgroundColor: scrolled ? "rgba(9,9,11,0.72)" : "rgba(9,9,11,0.2)",
+        backgroundColor: scrolled ? "var(--navbar-bg-scrolled)" : "var(--navbar-bg-top)",
         backdropFilter: "blur(28px) saturate(160%)",
         WebkitBackdropFilter: "blur(28px) saturate(160%)",
-        borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid rgba(255,255,255,0.04)",
+        borderBottom: scrolled ? `1px solid var(--navbar-border)` : "1px solid rgba(255,255,255,0.04)",
         boxShadow: scrolled ? "0 4px 32px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04)" : "none",
       }}
     >
@@ -54,9 +53,9 @@ export default function Navbar() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                style={{ display: "inline-block", fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "14px", color: "rgba(244,245,246,0.65)", textDecoration: "none", padding: "6px 14px", borderRadius: "8px", whiteSpace: "nowrap", transition: "color 180ms ease, background 180ms ease" }}
-                onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "#F4F5F6"; el.style.background = "rgba(244,245,246,0.06)"; }}
-                onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "rgba(244,245,246,0.65)"; el.style.background = "transparent"; }}
+                style={{ display: "inline-block", fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "14px", color: "var(--color-text-p65)", textDecoration: "none", padding: "6px 14px", borderRadius: "8px", whiteSpace: "nowrap", transition: "color 180ms ease, background 180ms ease" }}
+                onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "var(--color-text-primary)"; el.style.background = "var(--color-border-subtle)"; }}
+                onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "var(--color-text-p65)"; el.style.background = "transparent"; }}
               >
                 {link.label}
               </Link>
@@ -64,24 +63,26 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA — desktop */}
-        <Link
-          href="#ingresso"
-          className="btn-cta cta-navbar-btn"
-          style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 22px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "pointer", flexShrink: 0 }}
-        >
-          <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "13px", color: "#0D0F10", whiteSpace: "nowrap" }}>Candidatar-se</span>
-          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </Link>
+        {/* Right side — desktop: CTA */}
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", flexShrink: 0 }}>
+          <Link
+            href="#ingresso"
+            className="btn-cta cta-navbar-btn"
+            style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 22px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "pointer" }}
+          >
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "13px", color: "var(--color-text-on-accent)", whiteSpace: "nowrap" }}>Candidatar-se</span>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--color-text-on-accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+        </div>
 
         {/* Hamburger */}
         <button
           className="hamburger-btn"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
-          style={{ background: "none", border: "none", cursor: "pointer", padding: "6px", display: "none", color: "#F4F5F6", position: "relative", width: "32px", height: "32px", alignItems: "center", justifyContent: "center" }}
+          style={{ background: "none", border: "none", cursor: "pointer", padding: "6px", display: "none", color: "var(--color-text-primary)", position: "relative", width: "32px", height: "32px", alignItems: "center", justifyContent: "center" }}
         >
           <AnimatePresence mode="wait" initial={false}>
             {menuOpen ? (
@@ -122,7 +123,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            style={{ overflow: "hidden", background: "rgba(9,9,11,0.97)", backdropFilter: "blur(28px)", borderTop: "1px solid rgba(244,245,246,0.07)" }}
+            style={{ overflow: "hidden", background: "var(--navbar-bg-scrolled)", backdropFilter: "blur(28px)", borderTop: "1px solid var(--color-border)" }}
           >
             <div style={{ padding: "16px 20px 32px", display: "flex", flexDirection: "column", gap: "4px" }}>
               {navLinks.map((link, i) => (
@@ -135,9 +136,9 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "17px", color: "rgba(244,245,246,0.75)", textDecoration: "none", padding: "13px 16px", borderRadius: "12px", transition: "color 160ms ease, background 160ms ease" }}
-                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "#F4F5F6"; el.style.background = "rgba(244,245,246,0.05)"; }}
-                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "rgba(244,245,246,0.75)"; el.style.background = "transparent"; }}
+                    style={{ display: "flex", alignItems: "center", justifyContent: "space-between", fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "17px", color: "var(--color-text-p65)", textDecoration: "none", padding: "13px 16px", borderRadius: "12px", transition: "color 160ms ease, background 160ms ease" }}
+                    onMouseEnter={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "var(--color-text-primary)"; el.style.background = "var(--color-text-p08)"; }}
+                    onMouseLeave={(e) => { const el = e.currentTarget as HTMLElement; el.style.color = "var(--color-text-p65)"; el.style.background = "transparent"; }}
                   >
                     {link.label}
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -147,12 +148,12 @@ export default function Navbar() {
                 </motion.div>
               ))}
 
-              {/* CTA mobile */}
+              {/* CTA mobile + ThemeToggle */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.3, delay: 0.06 + navLinks.length * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                style={{ marginTop: "12px", paddingTop: "16px", borderTop: "1px solid rgba(244,245,246,0.06)" }}
+                style={{ marginTop: "12px", paddingTop: "16px", borderTop: "1px solid var(--color-border-subtle)", display: "flex", flexDirection: "column", gap: "12px" }}
               >
                 <Link
                   href="#ingresso"
@@ -160,11 +161,12 @@ export default function Navbar() {
                   className="btn-cta"
                   style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", padding: "14px 24px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none" }}
                 >
-                  <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#0D0F10" }}>Candidatar-se no Lyceum</span>
+                  <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "var(--color-text-on-accent)" }}>Candidatar-se no Lyceum</span>
                   <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--color-text-on-accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </Link>
+
               </motion.div>
             </div>
           </motion.div>
@@ -173,7 +175,7 @@ export default function Navbar() {
 
       <style>{`
         @media (max-width: 1199px) { .nav-inner { padding: 0 32px !important; } .nav-links-desktop { gap: 4px !important; } }
-        @media (max-width: 900px) { .nav-links-desktop { display: none !important; } .cta-navbar-btn { display: none !important; } .hamburger-btn { display: flex !important; } }
+        @media (max-width: 900px) { .nav-links-desktop { display: none !important; } .cta-navbar-btn { display: none !important; } .theme-toggle-desktop { display: none !important; } .hamburger-btn { display: flex !important; } }
       `}</style>
     </header>
   );

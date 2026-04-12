@@ -100,7 +100,7 @@ export default function FAQ() {
           letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e",
           display: "block", marginBottom: "16px",
         }}>
-          Admissões
+          FAQ
         </span>
         <h2 style={{
           fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800,

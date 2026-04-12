@@ -13,7 +13,7 @@ const HERO_IMAGES: string[] = [
 ];
 // ────────────────────────────────────────────────────────────────────────────
 
-const INTERVAL = 5000; // ms entre cada troca
+const INTERVAL = 5000;
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -35,14 +35,20 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="hero-section"
-      style={{ position: "relative", width: "100%", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", overflow: "hidden", borderBottom: "1px solid rgba(244,245,246,0.06)", paddingTop: "80px" }}
+      style={{
+        position: "relative",
+        width: "100%",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
+        borderBottom: "1px solid var(--color-border-subtle)",
+        paddingTop: "80px",
+      }}
     >
       {/* ── Background ── */}
       <motion.div style={{ position: "absolute", inset: 0, zIndex: 0, y }}>
-
         {hasImages ? (
-          /* Slideshow com fade */
           <>
             <AnimatePresence initial={false}>
               <motion.div
@@ -62,36 +68,26 @@ export default function Hero() {
                 />
               </motion.div>
             </AnimatePresence>
-            {/* Overlay escuro sobre a foto */}
-            <div style={{ position: "absolute", inset: 0, background: "rgba(9,9,11,0.58)" }} />
+            <div style={{ position: "absolute", inset: 0, background: "rgba(9,9,11,0.65)" }} />
           </>
         ) : (
-          /* Placeholder enquanto não há imagens */
           <div style={{
             position: "absolute", inset: 0,
             background: "linear-gradient(160deg, #16140F 0%, #0C0A06 50%, #0D0F10 100%)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-          }}>
-            <span style={{ fontFamily: "'Inter', sans-serif", fontSize: "12px", color: "rgba(200,169,110,0.25)", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-              Imagens em breve
-            </span>
-          </div>
+          }} />
         )}
-
-        {/* Gradiente dourado no topo */}
-        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200,169,110,0.12) 0%, transparent 65%)", pointerEvents: "none" }} />
-        {/* Fade para preto na base */}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "280px", background: "linear-gradient(to bottom, transparent, #09090B)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 0% 50%, rgba(200,169,110,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "260px", background: "linear-gradient(to bottom, transparent, #09090B)", pointerEvents: "none" }} />
       </motion.div>
 
-      {/* ── Dots indicator (só aparece quando há imagens) ── */}
+      {/* Slideshow dots */}
       {hasImages && HERO_IMAGES.length > 1 && (
         <div style={{ position: "absolute", bottom: "32px", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "8px", zIndex: 3, pointerEvents: "none" }}>
           {HERO_IMAGES.map((_, i) => (
             <div key={i} style={{
               width: i === current ? "20px" : "6px", height: "6px",
               borderRadius: "200px",
-              background: i === current ? "#c8a96e" : "rgba(200,169,110,0.3)",
+              background: i === current ? "var(--color-accent)" : "rgba(200,169,110,0.3)",
               transition: "width 400ms ease, background 400ms ease",
             }} />
           ))}
@@ -100,7 +96,17 @@ export default function Hero() {
 
       {/* ── Content ── */}
       <motion.div
-        style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", alignItems: "center", gap: "32px", maxWidth: "860px", padding: "0 24px 100px", textAlign: "center", opacity }}
+        className="hero-inner"
+        style={{
+          position: "relative", zIndex: 2,
+          width: "1140px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          gap: "32px",
+          padding: "80px 0 120px",
+          opacity,
+        }}
       >
         {/* Badge */}
         <motion.div
@@ -112,24 +118,28 @@ export default function Hero() {
           <motion.span
             animate={{ scale: [1, 1.3, 1], opacity: [1, 0.6, 1] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#c8a96e", flexShrink: 0, display: "block" }}
+            style={{ width: "6px", height: "6px", borderRadius: "50%", background: "var(--color-accent)", flexShrink: 0, display: "block" }}
           />
-          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "12px", color: "#c8a96e", letterSpacing: "0.06em", textTransform: "uppercase" }}>
-            Escola de Filosofia Clássica — Brasil
+          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "12px", color: "var(--color-accent)", letterSpacing: "0.06em", textTransform: "uppercase" }}>
+            1ª Escola de Filosofia Clássica do Brasil
           </span>
         </motion.div>
 
         {/* H1 */}
-        <h1 className="hero-h1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, lineHeight: "108%", letterSpacing: "-0.03em", fontSize: "72px", margin: 0 }}>
-          {["Escola de filosofia", "pelo Método Socrático", "de discussão."].map((line, i) => (
+        <h1 className="hero-h1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, lineHeight: "106%", letterSpacing: "-0.035em", fontSize: "80px", margin: 0 }}>
+          {[
+            { text: "Escola de filosofia", gold: false },
+            { text: "clássica pelo Método", gold: false },
+            { text: "Socrático.", gold: true },
+          ].map((line, i) => (
             <motion.span
               key={i}
               initial={{ opacity: 0, y: 48, filter: "blur(8px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               transition={{ duration: 0.8, delay: 0.2 + i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              style={{ color: i === 2 ? "#c8a96e" : "#F4F5F6", display: "block" }}
+              style={{ color: line.gold ? "var(--color-accent)" : "var(--color-text-primary)", display: "block" }}
             >
-              {line}
+              {line.text}
             </motion.span>
           ))}
         </h1>
@@ -140,9 +150,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "18px", lineHeight: "170%", color: "#8A9AA4", maxWidth: "600px", margin: 0 }}
+          style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "17px", lineHeight: "170%", color: "var(--color-text-muted)", maxWidth: "520px", margin: 0 }}
         >
-          Formação filosófica séria, fundamentada nos grandes textos da tradição ocidental, conduzida pelo método socrático de discussão. Uma escola para quem deseja pensar com clareza, rigor e profundidade.
+          Inspirado no modelo pedagógico do Thomas Aquinas College (EUA), o Lyceum é uma comunidade de formação intelectual fundada sobre os pilares da Tradição Católica, do método socrático e da leitura dos grandes clássicos.
         </motion.p>
 
         {/* CTAs */}
@@ -150,36 +160,56 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.95, ease: [0.16, 1, 0.3, 1] }}
-          style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}
+          className="hero-cta-row"
+          style={{ display: "flex", gap: "12px", alignItems: "center" }}
         >
-          <div style={{ display: "flex", gap: "12px", alignItems: "center" }} className="hero-cta-row">
-            <Link href="#ingresso" className="btn-cta"
-              style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "14px 32px", borderRadius: "200px", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", textDecoration: "none", cursor: "none" }}
-            >
-              <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "#0D0F10" }}>
-                Candidatar-se ao Lyceum
-              </span>
-              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </Link>
+          <Link
+            href="#ingresso"
+            className="btn-cta"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: "10px",
+              padding: "14px 32px", borderRadius: "200px",
+              background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)",
+              textDecoration: "none",
+            }}
+          >
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "15px", color: "var(--color-text-on-accent)" }}>
+              Candidatar-se ao Lyceum
+            </span>
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--color-text-on-accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
 
-            <Link href="#lyceum"
-              style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "14px 28px", borderRadius: "200px", border: "1px solid rgba(244,245,246,0.12)", textDecoration: "none", cursor: "none", transition: "border-color 180ms ease" }}
-              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(244,245,246,0.28)")}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(244,245,246,0.12)")}
-            >
-              <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "15px", color: "#F4F5F6" }}>
-                Conhecer o método
-              </span>
-            </Link>
-          </div>
+          <Link
+            href="#lyceum"
+            style={{
+              display: "inline-flex", alignItems: "center", gap: "8px",
+              padding: "14px 28px", borderRadius: "200px",
+              border: "1px solid var(--color-border-medium)",
+              textDecoration: "none", transition: "border-color 180ms ease",
+            }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(244,245,246,0.28)")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "var(--color-border-medium)")}
+          >
+            <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "15px", color: "var(--color-text-primary)" }}>
+              Conhecer o método
+            </span>
+          </Link>
         </motion.div>
       </motion.div>
 
       <style>{`
-        @media (max-width: 1100px) { .hero-h1 { font-size: 56px !important; } }
-        @media (max-width: 768px) { .hero-h1 { font-size: 40px !important; letter-spacing: -0.02em !important; } .hero-lead { font-size: 16px !important; } .hero-cta-row { flex-direction: column !important; width: 100% !important; } .hero-cta-row a { width: 100% !important; justify-content: center !important; } }
+        .hero-inner { padding-left: 48px !important; padding-right: 48px !important; }
+        @media (max-width: 1199px) { .hero-inner { width: 100% !important; } }
+        @media (max-width: 1100px) { .hero-h1 { font-size: 62px !important; } }
+        @media (max-width: 768px) {
+          .hero-h1 { font-size: 40px !important; letter-spacing: -0.02em !important; }
+          .hero-lead { font-size: 15px !important; }
+          .hero-cta-row { flex-direction: column !important; width: 100% !important; }
+          .hero-cta-row a { width: 100% !important; justify-content: center !important; }
+          .hero-inner { padding: 60px 24px 100px !important; }
+        }
       `}</style>
     </section>
   );

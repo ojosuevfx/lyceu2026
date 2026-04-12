@@ -16,8 +16,8 @@ export default function About() {
         style={{
           display: "flex", flexFlow: "row", justifyContent: "space-between", alignItems: "center", gap: "64px",
           width: "1140px", padding: "80px", borderRadius: "24px", position: "relative", overflow: "hidden",
-          background: "radial-gradient(100% 100% at 50% 0px, #1E2424 0%, #0D0F10 100%)",
-          border: "1px solid rgba(244,245,246,0.07)",
+          background: "var(--gradient-card)",
+          border: "1px solid var(--color-border)",
         }}
       >
         {/* Glow */}
@@ -49,14 +49,14 @@ export default function About() {
           viewport={{ once: true, margin: "-8%" }}
           style={{ display: "flex", flexDirection: "column", gap: "28px", width: "44%", zIndex: 1 }}
         >
-          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#c8a96e" }}>O Lyceum</span>
+          <span style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--color-accent)" }}>O Lyceum</span>
 
-          <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "32px", lineHeight: "118%", letterSpacing: "-0.025em", color: "#F4F5F6", margin: 0 }}>
+          <h3 style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, fontSize: "32px", lineHeight: "118%", letterSpacing: "-0.025em", color: "var(--color-text-primary)", margin: 0 }}>
             Uma escola de filosofia fundamentada na{" "}
-            <span style={{ color: "#c8a96e" }}>tradição perene do Ocidente.</span>
+            <span style={{ color: "var(--color-accent)" }}>tradição perene do Ocidente.</span>
           </h3>
 
-          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "#8A9AA4", margin: 0 }}>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "var(--color-text-muted)", margin: 0 }}>
               É uma comunidade de formação intelectual inspirada na experiência real de um estudante do Thomas Aquinas College. <br />
               <br />
             Não é um curso gravado. Não é uma série de videoaulas. É uma escola, com
@@ -72,9 +72,9 @@ export default function About() {
           <Link href="#ingresso" className="btn-cta"
             style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "13px 28px", borderRadius: "200px", textDecoration: "none", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", cursor: "pointer", width: "fit-content" }}
           >
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Candidatar-se</span>
+            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "var(--color-text-on-accent)" }}>Candidatar-se</span>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="var(--color-text-on-accent)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </Link>
         </motion.div>

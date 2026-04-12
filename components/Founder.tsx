@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Founder() {
@@ -94,17 +93,6 @@ export default function Founder() {
               Lucca de Tomás
             </span>
           </div>
-
-          <Link
-            href="#ingresso"
-            className="btn-cta"
-            style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "14px 30px", borderRadius: "200px", textDecoration: "none", background: "linear-gradient(90deg, #c8a96e 0%, #e2c98a 100%)", cursor: "pointer", width: "fit-content", boxShadow: "0 4px 20px rgba(200,169,110,0.3)" }}
-          >
-            <span style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "14px", color: "#0D0F10" }}>Processo de candidatura</span>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M3 8h10M9 4l4 4-4 4" stroke="#0D0F10" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Link>
         </motion.div>
       </div>
 

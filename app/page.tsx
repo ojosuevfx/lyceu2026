@@ -15,7 +15,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 
 export default function Home() {
   return (
-    <main style={{ backgroundColor: "#0C0A06", minHeight: "100vh", overflowX: "hidden" }}>
+    <main style={{ backgroundColor: "var(--color-bg-main)", minHeight: "100vh", overflowX: "hidden" }}>
       <SmoothScroll />
 <Navbar />
       <Hero />
