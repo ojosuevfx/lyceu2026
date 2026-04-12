@@ -8,7 +8,6 @@ import HowItWorks from "@/components/HowItWorks";
 import Formation from "@/components/Formation";
 import Curriculum from "@/components/Curriculum";
 import Founder from "@/components/Founder";
-import Cases from "@/components/Cases";
 import CTAIngresso from "@/components/CTAIngresso";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
@@ -28,7 +27,6 @@ export default function Home() {
       <Formation />
       <Curriculum />
       <Founder />
-      <Cases />
       <CTAIngresso />
       <FAQ />
       <Footer />
