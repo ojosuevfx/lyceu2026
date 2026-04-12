@@ -57,16 +57,10 @@ export default function About() {
           </h3>
 
           <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "var(--color-text-muted)", margin: 0 }}>
-              É uma comunidade de formação intelectual inspirada na experiência real de um estudante do Thomas Aquinas College. <br />
-              <br />
-            Não é um curso gravado. Não é uma série de videoaulas. É uma escola, com
-            currículo estruturado, encontros ao vivo, discussões reais e um ambiente
-            que te convida a pensar mais fundo a cada semana.
-            <br />
-            <br />
-            É o ambiente ideal para quem deseja desenvolver sua capacidade de pensar
-            com clareza, argumentar com precisão e compreender os fundamentos da realidade
-            segundo a tradição perene da Filosofia.
+            O Lyceum é uma comunidade de formação intelectual inspirada no modelo pedagógico do Thomas Aquinas College (EUA) — uma das instituições mais rigorosas do mundo no ensino clássico.
+          </p>
+          <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: "15px", lineHeight: "170%", color: "var(--color-text-muted)", margin: 0 }}>
+            Seu currículo percorre, em quatro anos, os grandes textos da tradição filosófica ocidental — de Platão a Santo Tomás de Aquino — por meio do método socrático de discussão, em turmas deliberadamente pequenas.
           </p>
 
           <Link href="#ingresso" className="btn-cta"
